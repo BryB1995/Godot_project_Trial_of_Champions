@@ -1,0 +1,557 @@
+[gd_scene load_steps=76 format=2]
+
+[ext_resource path="res://Assets/beach_sand.png" type="Texture" id=1]
+[ext_resource path="res://Assets/ZombieInvasionBg1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/sky_112.bmp" type="Texture" id=3]
+[ext_resource path="res://player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://enemy1.gd" type="Script" id=5]
+[ext_resource path="res://cerberusGoodish.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/cerberus_texture.png" type="Texture" id=7]
+[ext_resource path="res://enemy2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://enemy2.gd" type="Script" id=9]
+[ext_resource path="res://sorcBestIGuess.tscn" type="PackedScene" id=10]
+[ext_resource path="res://globalOpponent.gd" type="Script" id=11]
+[ext_resource path="res://count.gd" type="Script" id=12]
+[ext_resource path="res://Assets/blackbox.jpg" type="Texture" id=13]
+[ext_resource path="res://Assets/hpIcon.png" type="Texture" id=14]
+[ext_resource path="res://Assets/hypeicon.png" type="Texture" id=15]
+[ext_resource path="res://num.gd" type="Script" id=16]
+[ext_resource path="res://Assets/logbg.png" type="Texture" id=17]
+[ext_resource path="res://logMsg.gd" type="Script" id=18]
+[ext_resource path="res://shopButton.gd" type="Script" id=19]
+[ext_resource path="res://buttons.gd" type="Script" id=20]
+[ext_resource path="res://Assets/attackButton.png" type="Texture" id=21]
+[ext_resource path="res://Assets/ATTACkbuttonHighlight.png" type="Texture" id=22]
+[ext_resource path="res://attackButton.gd" type="Script" id=23]
+[ext_resource path="res://Assets/magicButton.png" type="Texture" id=24]
+[ext_resource path="res://Assets/magicHighlight.png" type="Texture" id=25]
+[ext_resource path="res://magicButton.gd" type="Script" id=26]
+[ext_resource path="res://Assets/flourishButton.png" type="Texture" id=27]
+[ext_resource path="res://Assets/FLOURISHhighlight.png" type="Texture" id=28]
+[ext_resource path="res://flourishButton.gd" type="Script" id=29]
+[ext_resource path="res://healWounds.gd" type="Script" id=30]
+[ext_resource path="res://forceBolt.gd" type="Script" id=31]
+[ext_resource path="res://mageArmor.gd" type="Script" id=32]
+[ext_resource path="res://dancingLights.gd" type="Script" id=33]
+[ext_resource path="res://shopUi.gd" type="Script" id=34]
+[ext_resource path="res://Assets/spellStoreIcon.png" type="Texture" id=35]
+[ext_resource path="res://forceBoltShop.gd" type="Script" id=36]
+[ext_resource path="res://mageArmorShop.gd" type="Script" id=37]
+[ext_resource path="res://dancingLightsShop.gd" type="Script" id=38]
+[ext_resource path="res://Assets/equipStoreIcon.png" type="Texture" id=39]
+[ext_resource path="res://jesterHat.gd" type="Script" id=40]
+[ext_resource path="res://AssassinSuit.gd" type="Script" id=41]
+[ext_resource path="res://bladeOil.gd" type="Script" id=42]
+[ext_resource path="res://towerShield.gd" type="Script" id=43]
+[ext_resource path="res://potion.gd" type="Script" id=44]
+[ext_resource path="res://Assets/statsIcon.png" type="Texture" id=45]
+[ext_resource path="res://strength.gd" type="Script" id=46]
+[ext_resource path="res://Dexterity.gd" type="Script" id=47]
+[ext_resource path="res://Magic.gd" type="Script" id=48]
+[ext_resource path="res://Endurance.gd" type="Script" id=49]
+[ext_resource path="res://Assets/continueIcon.png" type="Texture" id=50]
+[ext_resource path="res://Label.gd" type="Script" id=51]
+[ext_resource path="res://statLabel.gd" type="Script" id=52]
+[ext_resource path="res://Button.gd" type="Script" id=53]
+[ext_resource path="res://enemy3.tscn" type="PackedScene" id=54]
+[ext_resource path="res://Assets/movement-proposition-by-kevin-macleod-from-filmmusic-io.ogg" type="AudioStream" id=55]
+[ext_resource path="res://musicHandler.gd" type="Script" id=56]
+[ext_resource path="res://Assets/179222__mixedupmoviestuff__knife-stab.wav" type="AudioStream" id=57]
+[ext_resource path="res://sfxStab.gd" type="Script" id=58]
+[ext_resource path="res://Assets/FIXED60013__qubodup__whoosh.wav" type="AudioStream" id=59]
+[ext_resource path="res://sfxWhoosh.gd" type="Script" id=60]
+[ext_resource path="res://Assets/406063__aleks41__magic-strike.wav" type="AudioStream" id=61]
+[ext_resource path="res://sfxMagic.gd" type="Script" id=62]
+[ext_resource path="res://Assets/FIXED337000__tim-kahn__cheer-01-TRIMMED.wav" type="AudioStream" id=63]
+[ext_resource path="res://sfxCheer.gd" type="Script" id=64]
+[ext_resource path="res://Assets/524607__clearwavsound__crunchy-bite.wav" type="AudioStream" id=65]
+[ext_resource path="res://sfxBite.gd" type="Script" id=66]
+[ext_resource path="res://Assets/195568__jacobalcook__creature-roar-1.wav" type="AudioStream" id=67]
+[ext_resource path="res://sfxRoar.gd" type="Script" id=68]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.972656, 0.736616, 0.547119, 1 )
+albedo_texture = ExtResource( 1 )
+metallic_specular = 0.0
+roughness_texture_channel = 4
+normal_enabled = true
+normal_scale = 1.0
+
+[sub_resource type="PlaneMesh" id=2]
+
+[sub_resource type="PlaneMesh" id=3]
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_texture = ExtResource( 2 )
+uv1_scale = Vector3( 5, 3, 1 )
+
+[sub_resource type="PlaneMesh" id=5]
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_texture = ExtResource( 7 )
+
+[node name="root" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5833, 1.18408, 8.44515 )
+fov = 80.8079
+
+[node name="floor" type="MeshInstance" parent="."]
+transform = Transform( 12.6205, 0, 0, 0, 0.0531052, 0, 0, 0, 3.3717, 2.28341, 0.400682, 6.19313 )
+material_override = SubResource( 1 )
+cast_shadow = 0
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="arenaWall" type="MeshInstance" parent="."]
+transform = Transform( 12.6205, 0, 0, 0, -2.12255e-010, -2.69215, 0, 0.383662, -9.2978e-006, 2.28341, 1.03007, 3.15262 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="skyBackdrop" type="MeshInstance" parent="."]
+transform = Transform( 26.5847, 0, 0, 0, -3.95968e-007, -9.05871, 0, 1, -4.37114e-008, 2.72608, 9.70772, -3.51673 )
+mesh = SubResource( 5 )
+material/0 = SubResource( 6 )
+
+[node name="player" parent="." instance=ExtResource( 4 )]
+
+[node name="oShadeblade" parent="player" index="0"]
+transform = Transform( 0.675795, 0, 0, 0, 0.757325, 0, 0, 0, 1.24746, 5.185, 3.61, 10.785 )
+
+[node name="enemy1" type="KinematicBody" parent="."]
+transform = Transform( 2.21373, 0, 0, 0, 2.21373, 0, 0, 0, 2.21373, 2.80645, 1.94818, 5.79096 )
+script = ExtResource( 5 )
+
+[node name="cerberusGoodish" parent="enemy1" instance=ExtResource( 6 )]
+transform = Transform( 0.0768843, 0, 0, 0, 0.0768843, 0, 0, 0, 0.0768843, 0, 0, 0 )
+
+[node name="Cerberus" parent="enemy1/cerberusGoodish/Armature" index="0"]
+material/0 = SubResource( 7 )
+
+[node name="enemy2" parent="." instance=ExtResource( 8 )]
+script = ExtResource( 9 )
+
+[node name="sorc" parent="enemy2" instance=ExtResource( 10 )]
+transform = Transform( 0.0661845, 0, 0, 0, -0.00103742, -0.0661764, 0, 0.0661764, -0.00103742, 13.3526, -5.69776, 6.18895 )
+
+[node name="globalOpponent" type="Node" parent="."]
+script = ExtResource( 11 )
+
+[node name="gui" type="MarginContainer" parent="."]
+anchor_right = 1.0
+margin_bottom = 232.296
+rect_scale = Vector2( 1, 0.993055 )
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="masterBox" type="HBoxContainer" parent="gui"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1004.0
+margin_bottom = 286.0
+
+[node name="bars" type="VBoxContainer" parent="gui/masterBox"]
+margin_right = 604.0
+margin_bottom = 266.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="barHP" type="HBoxContainer" parent="gui/masterBox/bars"]
+editor/display_folded = true
+margin_right = 604.0
+margin_bottom = 111.0
+
+[node name="count" type="MarginContainer" parent="gui/masterBox/bars/barHP"]
+margin_right = 300.0
+margin_bottom = 111.0
+script = ExtResource( 12 )
+
+[node name="background" type="NinePatchRect" parent="gui/masterBox/bars/barHP/count"]
+margin_right = 300.0
+margin_bottom = 111.0
+rect_min_size = Vector2( 300, 111 )
+texture = ExtResource( 13 )
+region_rect = Rect2( 133.045, -369.089, 3.87708, 422.6 )
+
+[node name="title" type="TextureRect" parent="gui/masterBox/bars/barHP/count"]
+margin_right = 300.0
+margin_bottom = 111.0
+rect_min_size = Vector2( 133, 111 )
+texture = ExtResource( 14 )
+
+[node name="num" type="Label" parent="gui/masterBox/bars/barHP/count"]
+margin_top = 48.0
+margin_right = 300.0
+margin_bottom = 62.0
+custom_colors/font_color = Color( 0.839216, 0, 0, 1 )
+text = "BAD"
+align = 2
+valign = 1
+
+[node name="barHype" type="HBoxContainer" parent="gui/masterBox/bars"]
+editor/display_folded = true
+margin_top = 115.0
+margin_right = 604.0
+margin_bottom = 188.0
+
+[node name="count" type="MarginContainer" parent="gui/masterBox/bars/barHype"]
+margin_right = 250.0
+margin_bottom = 73.0
+
+[node name="background" type="NinePatchRect" parent="gui/masterBox/bars/barHype/count"]
+margin_right = 250.0
+margin_bottom = 73.0
+rect_min_size = Vector2( 100, 40 )
+texture = ExtResource( 13 )
+region_rect = Rect2( 133.045, -369.089, 3.87708, 422.6 )
+
+[node name="title" type="TextureRect" parent="gui/masterBox/bars/barHype/count"]
+margin_right = 250.0
+margin_bottom = 73.0
+texture = ExtResource( 15 )
+
+[node name="num" type="Label" parent="gui/masterBox/bars/barHype/count"]
+margin_top = 16.0
+margin_right = 250.0
+margin_bottom = 57.0
+rect_min_size = Vector2( 250, 41 )
+custom_colors/font_color = Color( 0.839216, 0.729412, 0, 1 )
+text = "BAD"
+align = 2
+script = ExtResource( 16 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="gui/masterBox/bars"]
+margin_top = 192.0
+margin_right = 604.0
+margin_bottom = 266.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="gui/masterBox/bars/VBoxContainer"]
+editor/display_folded = true
+margin_right = 250.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 250, 50 )
+size_flags_horizontal = 0
+texture = ExtResource( 17 )
+
+[node name="logMsg" type="Label" parent="gui/masterBox/bars/VBoxContainer/NinePatchRect"]
+margin_top = 28.0
+margin_right = 40.0
+margin_bottom = 14.0
+text = "BAD DATA"
+align = 3
+valign = 2
+script = ExtResource( 18 )
+
+[node name="shopButton" type="Button" parent="gui/masterBox/bars/VBoxContainer"]
+margin_top = 54.0
+margin_right = 116.0
+margin_bottom = 74.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Proceed to Shop"
+script = ExtResource( 19 )
+
+[node name="buttons" type="VBoxContainer" parent="gui/masterBox"]
+margin_left = 608.0
+margin_right = 984.0
+margin_bottom = 266.0
+script = ExtResource( 20 )
+
+[node name="attackButton" type="TextureButton" parent="gui/masterBox/buttons"]
+margin_right = 376.0
+margin_bottom = 87.0
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 22 )
+script = ExtResource( 23 )
+
+[node name="magicButton" type="TextureButton" parent="gui/masterBox/buttons"]
+margin_top = 91.0
+margin_right = 376.0
+margin_bottom = 167.0
+texture_normal = ExtResource( 24 )
+texture_pressed = ExtResource( 25 )
+script = ExtResource( 26 )
+
+[node name="flourishButton" type="TextureButton" parent="gui/masterBox/buttons"]
+margin_top = 171.0
+margin_right = 376.0
+margin_bottom = 238.0
+texture_normal = ExtResource( 27 )
+texture_pressed = ExtResource( 28 )
+script = ExtResource( 29 )
+
+[node name="spellButtoncontainer" type="HBoxContainer" parent="gui/masterBox/buttons"]
+margin_top = 242.0
+margin_right = 376.0
+margin_bottom = 262.0
+
+[node name="healWounds" type="Button" parent="gui/masterBox/buttons/spellButtoncontainer"]
+margin_right = 97.0
+margin_bottom = 20.0
+text = "Heal Wounds"
+script = ExtResource( 30 )
+
+[node name="forceBolt" type="Button" parent="gui/masterBox/buttons/spellButtoncontainer"]
+margin_left = 101.0
+margin_right = 173.0
+margin_bottom = 20.0
+text = "Forcebolt"
+script = ExtResource( 31 )
+
+[node name="mageArmor" type="Button" parent="gui/masterBox/buttons/spellButtoncontainer"]
+margin_left = 177.0
+margin_right = 267.0
+margin_bottom = 20.0
+text = "Mage Armor"
+script = ExtResource( 32 )
+
+[node name="dancingLights" type="Button" parent="gui/masterBox/buttons/spellButtoncontainer"]
+margin_left = 271.0
+margin_right = 376.0
+margin_bottom = 20.0
+text = "Dancing Lights"
+script = ExtResource( 33 )
+
+[node name="shopUi" type="MarginContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 34 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="shopUi"]
+margin_right = 1012.0
+margin_bottom = 180.0
+
+[node name="SpellColumn" type="VBoxContainer" parent="shopUi/HBoxContainer"]
+margin_right = 250.0
+margin_bottom = 180.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="shopUi/HBoxContainer/SpellColumn"]
+margin_right = 250.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 250, 60 )
+texture = ExtResource( 35 )
+
+[node name="forceBoltShop" type="Button" parent="shopUi/HBoxContainer/SpellColumn"]
+margin_top = 64.0
+margin_right = 250.0
+margin_bottom = 84.0
+hint_tooltip = "Deal 5 to 9 + your magic ability in damage!"
+text = "Forcebolt"
+script = ExtResource( 36 )
+
+[node name="mageArmorShop" type="Button" parent="shopUi/HBoxContainer/SpellColumn"]
+margin_top = 88.0
+margin_right = 250.0
+margin_bottom = 108.0
+hint_tooltip = "Add your magic ability to your armor!"
+text = "Mage Armor"
+script = ExtResource( 37 )
+
+[node name="dancingLightsShop" type="Button" parent="shopUi/HBoxContainer/SpellColumn"]
+margin_top = 112.0
+margin_right = 250.0
+margin_bottom = 132.0
+hint_tooltip = "Create a show of lights to gain hype equal to 8 plus your magic stat!"
+text = "Dancing Lights"
+script = ExtResource( 38 )
+
+[node name="equipColumn" type="VBoxContainer" parent="shopUi/HBoxContainer"]
+margin_left = 254.0
+margin_right = 504.0
+margin_bottom = 180.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="shopUi/HBoxContainer/equipColumn"]
+margin_right = 250.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 250, 60 )
+texture = ExtResource( 39 )
+
+[node name="jesterHat" type="Button" parent="shopUi/HBoxContainer/equipColumn"]
+margin_top = 64.0
+margin_right = 250.0
+margin_bottom = 84.0
+hint_tooltip = "Look silly. All hype gains are increased by 10"
+text = "Jester's Hat"
+script = ExtResource( 40 )
+
+[node name="AssassinSuit" type="Button" parent="shopUi/HBoxContainer/equipColumn"]
+margin_top = 88.0
+margin_right = 250.0
+margin_bottom = 108.0
+hint_tooltip = "Move Nimbly, gaining a bonus to hit and dodge equal to 5 points of dexterity"
+text = "Assassin Suit"
+script = ExtResource( 41 )
+
+[node name="bladeOil" type="Button" parent="shopUi/HBoxContainer/equipColumn"]
+margin_top = 112.0
+margin_right = 250.0
+margin_bottom = 132.0
+hint_tooltip = "Refine your blade, gaining 5 extra damage on each attack "
+text = "Blade Oil"
+script = ExtResource( 42 )
+
+[node name="towerShield" type="Button" parent="shopUi/HBoxContainer/equipColumn"]
+margin_top = 136.0
+margin_right = 250.0
+margin_bottom = 156.0
+hint_tooltip = "Gain additional protection, blocking 10 damage from every attack"
+text = "Tower Shield"
+script = ExtResource( 43 )
+
+[node name="potion" type="Button" parent="shopUi/HBoxContainer/equipColumn"]
+margin_top = 160.0
+margin_right = 250.0
+margin_bottom = 180.0
+hint_tooltip = "Modify your body with this potion, gaining a bonus to max HP that scales with your endurance"
+text = "Strangeblood Potion"
+script = ExtResource( 44 )
+
+[node name="statColumn" type="VBoxContainer" parent="shopUi/HBoxContainer"]
+margin_left = 508.0
+margin_right = 758.0
+margin_bottom = 180.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="shopUi/HBoxContainer/statColumn"]
+margin_right = 250.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 250, 60 )
+texture = ExtResource( 45 )
+
+[node name="strength" type="Button" parent="shopUi/HBoxContainer/statColumn"]
+margin_top = 64.0
+margin_right = 250.0
+margin_bottom = 84.0
+text = "Strength"
+script = ExtResource( 46 )
+
+[node name="Label" type="Label" parent="shopUi/HBoxContainer/statColumn/strength"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "BAD"
+
+[node name="Dexterity" type="Button" parent="shopUi/HBoxContainer/statColumn"]
+margin_top = 88.0
+margin_right = 250.0
+margin_bottom = 108.0
+text = "Dexterity"
+script = ExtResource( 47 )
+
+[node name="Label" type="Label" parent="shopUi/HBoxContainer/statColumn/Dexterity"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "BAD"
+
+[node name="Magic" type="Button" parent="shopUi/HBoxContainer/statColumn"]
+margin_top = 112.0
+margin_right = 250.0
+margin_bottom = 132.0
+text = "Magic"
+script = ExtResource( 48 )
+
+[node name="Label" type="Label" parent="shopUi/HBoxContainer/statColumn/Magic"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "BAD"
+
+[node name="Endurance" type="Button" parent="shopUi/HBoxContainer/statColumn"]
+margin_top = 136.0
+margin_right = 250.0
+margin_bottom = 156.0
+text = "Endurance"
+script = ExtResource( 49 )
+
+[node name="Label" type="Label" parent="shopUi/HBoxContainer/statColumn/Endurance"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "BAD"
+
+[node name="controlColumn" type="VBoxContainer" parent="shopUi/HBoxContainer"]
+margin_left = 762.0
+margin_right = 1012.0
+margin_bottom = 180.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="shopUi/HBoxContainer/controlColumn"]
+margin_right = 250.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 250, 60 )
+texture = ExtResource( 50 )
+
+[node name="realGoldBg" type="NinePatchRect" parent="shopUi/HBoxContainer/controlColumn"]
+margin_top = 64.0
+margin_right = 250.0
+margin_bottom = 94.0
+rect_min_size = Vector2( 250, 30 )
+texture = ExtResource( 13 )
+
+[node name="Label" type="Label" parent="shopUi/HBoxContainer/controlColumn/realGoldBg"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "script failure"
+align = 1
+valign = 1
+script = ExtResource( 51 )
+
+[node name="statBg" type="NinePatchRect" parent="shopUi/HBoxContainer/controlColumn"]
+margin_top = 98.0
+margin_right = 250.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 250, 30 )
+texture = ExtResource( 13 )
+
+[node name="statLabel" type="Label" parent="shopUi/HBoxContainer/controlColumn/statBg"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "script failure"
+script = ExtResource( 52 )
+
+[node name="Button" type="Button" parent="shopUi/HBoxContainer/controlColumn"]
+margin_top = 132.0
+margin_right = 250.0
+margin_bottom = 152.0
+text = "Proceed to Next Fight"
+script = ExtResource( 53 )
+
+[node name="enemy3" parent="." instance=ExtResource( 54 )]
+transform = Transform( 0.087945, 0, 0, 0, 0.087945, 0, 0, 0, 0.087945, 2.51635, 1.26431, 6.54018 )
+
+[node name="musicHandler" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 55 )
+autoplay = true
+script = ExtResource( 56 )
+
+[node name="sfxStab" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 57 )
+script = ExtResource( 58 )
+
+[node name="sfxWhoosh" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 59 )
+script = ExtResource( 60 )
+
+[node name="sfxMagic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 61 )
+script = ExtResource( 62 )
+
+[node name="sfxCheer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 63 )
+script = ExtResource( 64 )
+
+[node name="sfxBite" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 65 )
+script = ExtResource( 66 )
+
+[node name="sfxRoar" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 67 )
+script = ExtResource( 68 )
+
+[editable path="player"]
+
+[editable path="enemy1/cerberusGoodish"]
+
+[editable path="enemy2/sorc"]
+
+[editable path="enemy3"]

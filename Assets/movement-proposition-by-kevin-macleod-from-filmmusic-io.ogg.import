@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/movement-proposition-by-kevin-macleod-from-filmmusic-io.ogg-07bc903b97d651a3929a83edaa19afbc.oggstr"
+
+[deps]
+
+source_file="res://Assets/movement-proposition-by-kevin-macleod-from-filmmusic-io.ogg"
+dest_files=[ "res://.import/movement-proposition-by-kevin-macleod-from-filmmusic-io.ogg-07bc903b97d651a3929a83edaa19afbc.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

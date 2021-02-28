@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/FIXED337000__tim-kahn__cheer-01-TRIMMED.wav-7caae0b933f601f8e313f63ff352756a.sample"
+
+[deps]
+
+source_file="res://Assets/FIXED337000__tim-kahn__cheer-01-TRIMMED.wav"
+dest_files=[ "res://.import/FIXED337000__tim-kahn__cheer-01-TRIMMED.wav-7caae0b933f601f8e313f63ff352756a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

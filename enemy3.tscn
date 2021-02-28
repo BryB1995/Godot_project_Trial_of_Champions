@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://enemy3.gd" type="Script" id=1]
+[ext_resource path="res://berserkerReanimated.tscn" type="PackedScene" id=2]
+
+[node name="enemy3" type="KinematicBody"]
+transform = Transform( 0.206166, 0, 0, 0, 0.206166, 0, 0, 0, 0.206166, 2.56871, -0.508748, 0 )
+script = ExtResource( 1 )
+
+[node name="reanimatedBerserker" parent="." instance=ExtResource( 2 )]

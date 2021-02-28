@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/337000__tim-kahn__cheer-01-TRIMMED.ogg-8c2ec482305795f60db5e4fa9f73e1a1.oggstr"
+
+[deps]
+
+source_file="res://Assets/337000__tim-kahn__cheer-01-TRIMMED.ogg"
+dest_files=[ "res://.import/337000__tim-kahn__cheer-01-TRIMMED.ogg-8c2ec482305795f60db5e4fa9f73e1a1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

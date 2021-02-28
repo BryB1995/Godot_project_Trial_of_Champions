@@ -1,0 +1,11 @@
+[gd_resource type="Animation" format=2]
+
+[resource]
+resource_name = "magic"
+tracks/0/type = "transform"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 5.18493, 3.61035, 9.36907, 0, 0, 0, 1, 0.675795, 0.757325, 1.24746, 0.5, 1, 5.18493, 6.38742, 9.36907, 0, 0, 0, 1, 0.675795, 0.757325, 1.24746, 0.8, 1, 5.18493, 5.2736, 9.36907, 0, 0, 0, 1, 0.675795, 0.757325, 1.24746, 1, 1, 5.185, 3.61, 9.369, 0, 0, 0, 1, 0.675795, 0.757325, 1.24746 )

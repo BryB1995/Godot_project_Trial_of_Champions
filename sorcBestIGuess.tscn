@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/female_mage_v002ModdedbutDifferent.dae" type="PackedScene" id=1]
+[ext_resource path="res://Assets/female_mage_texture.png" type="Texture" id=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 2 )
+
+[node name="sorc" index="0" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.193252, -0.981149, 0, 0.981149, 0.193252, 0, 0, 0 )
+
+[node name="Cube" parent="Armature" index="0"]
+material/0 = SubResource( 1 )
